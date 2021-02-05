@@ -46,7 +46,7 @@ func handler(w http.ResponseWriter, req *http.Request) {
 func main() {
 	flag.StringVar(&path, "s", "", "Sub path(default:\"\")")
 	flag.Int64Var(&port, "p", 8000, "Listen port(default:8000)")
-	flag.StringVar(&address, "b", "127.0.0.1", "Bind address(default:\"0.0.0.0\")")
+	flag.StringVar(&address, "b", "0.0.0.0", "Bind address(default:\"0.0.0.0\")")
 	flag.BoolVar(&useForwardedIP, "f", false, "Use X-Forwarded-For given if exist and valid(default:false)")
 	flag.Parse()
 
